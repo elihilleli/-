@@ -1,0 +1,30 @@
+// MainActivity.kt
+package com.example.mulanproject
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var startButton: Button
+    private lateinit var outputText: TextView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        startButton = findViewById(R.id.start_button)
+        outputText = findViewById(R.id.output_text)
+
+        startButton.setOnClickListener {
+            startArabicLesson()
+        }
+    }
+
+    private fun startArabicLesson() {
+        // Add Arabic lesson logic here
+        outputText.text = "שלום, ברוך הבא ללימוד ערבית!"
+    }
+}
